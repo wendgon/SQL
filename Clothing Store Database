@@ -1,0 +1,38 @@
+--Create a store databse 
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, item TEXT, color TEXT, price INTEGER, quantity TEXT);  
+
+INSERT INTO clothing VALUES (1, "tank tops", "blue", 9.99, 93);
+INSERT INTO clothing VALUES (2, "plain shirts", "black", 13.99, 75);
+INSERT INTO clothing VALUES (3, "belts", "brown", 4.99, 47);
+INSERT INTO clothing VALUES (4, "jeans", "navy", 17.99, 78);
+INSERT INTO clothing VALUES (5, "jackets", "red", 29.99, 10);
+INSERT INTO clothing VALUES (6, "sandals", "tan", 13.99, 95);
+INSERT INTO clothing VALUES (7, "straw hats", "biege", 11.99, 86);
+INSERT INTO clothing VALUES (8, "graphic tees", "black", 15.99, 89);
+INSERT INTO clothing VALUES (9, "leggings", "black", 10.99, 92);
+INSERT INTO clothing VALUES (10, "boots", "black", 20.99, 15);
+INSERT INTO clothing VALUES (11, "sneakers", "white", 15.99, 73);
+INSERT INTO clothing VALUES (12, "snapbacks", "grey", 13.99, 85); 
+INSERT INTO clothing VALUES (13, "shorts", "blue", 13.99, 96);
+INSERT INTO clothing VALUES (14, "swimsuits", "black", 19.99, 91);
+INSERT INTO clothing VALUES (15, "athletic shorts", "blue", 16.99, 89);
+
+--Display the databse 
+
+SELECT * FROM clothing;
+
+
+--List the items in order by price
+
+SELECT* FROM clothing ORDER BY price DESC;
+
+
+--What are the five most popular items?
+
+SELECT item, color, price FROM clothing ORDER BY popularity DESC LIMIT 5;
+
+
+-- What is the average price from the store?
+
+SELECT AVG (price) FROM clothing;
